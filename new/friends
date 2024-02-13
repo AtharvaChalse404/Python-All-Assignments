@@ -1,0 +1,32 @@
+# Define an empty dictionary to store friends' names and phone numbers
+friends_dict = {}
+
+# Populate the dictionary with initial values
+friends_dict = {
+    'Alice': '123-456-7890',
+    'Bob': '234-567-8901',
+    'Charlie': '345-678-9012'
+}
+
+# Print the dictionary in sorted order
+print("Dictionary of friends' names and phone numbers:")
+for name, phone in sorted(friends_dict.items()):
+    print(f"{name}: {phone}")
+
+# Prompt the user to enter a name
+name_to_check = input("Enter a name to check if it's present in the dictionary: ")
+
+# Check if the name is present in the dictionary
+if name_to_check in friends_dict:
+    print(f"{name_to_check} is present in the dictionary. Phone number: {friends_dict[name_to_check]}")
+else:
+    print(f"{name_to_check} is not present in the dictionary.")
+    # Prompt the user to enter the phone number for the new friend
+    phone_number = input("Enter the phone number for this friend: ")
+    # Add the new friend and phone number to the dictionary
+    friends_dict[name_to_check] = phone_number
+
+# Print the updated dictionary
+print("Updated dictionary of friends' names and phone numbers:")
+for name, phone in sorted(friends_dict.items()):
+    print(f"{name}: {phone}")

@@ -1,0 +1,24 @@
+import random
+
+# Create a list of 10 random integers
+random_integers = [random.randint(1, 100) for _ in range(10)]
+
+# Initialize empty lists for odd and even numbers
+odd_list = []
+even_list = []
+
+# Separate odd and even numbers from the random integers list
+for num in random_integers:
+    if num % 2 == 0:  # Check if the number is even
+        even_list.append(num)
+    else:
+        odd_list.append(num)
+
+# Print the original list of random integers
+print("Original list of random integers:", random_integers)
+
+# Print the list of odd numbers
+print("List of odd numbers:", odd_list)
+
+# Print the list of even numbers
+print("List of even numbers:", even_list)
