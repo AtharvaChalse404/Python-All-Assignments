@@ -1,0 +1,15 @@
+# Initialize variables
+num = 100
+total = 0
+
+# While loop to iterate through numbers from 100 to 200
+while num <= 200:
+    # Check if the number is even
+    if num % 2 == 0:
+        # Add the even number to the total
+        total += num
+    # Increment the number by 1 for the next iteration
+    num += 1
+
+# Print the total sum of even numbers
+print("The sum of even numbers between 100 and 200 is:", total)

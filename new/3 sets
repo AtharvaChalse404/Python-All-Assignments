@@ -1,0 +1,18 @@
+def calculate_simple_interest(principal, rate, time):
+    """
+    Function to calculate simple interest.
+    """
+    interest = (principal * rate * time) / 100
+    return interest
+
+# Receive 3 sets of values for principal, rate, and time
+for _ in range(3):
+    principal = float(input("Enter the principal amount: "))
+    rate = float(input("Enter the interest rate (in percentage): "))
+    time = float(input("Enter the time period (in years): "))
+
+    # Calculate the simple interest for the current set of values
+    interest = calculate_simple_interest(principal, rate, time)
+
+    # Print the simple interest for the current set of values
+    print("Simple interest for principal Rs.", principal, "at", rate, "% interest for", time, "years is Rs.", interest)
