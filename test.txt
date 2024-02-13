@@ -1,0 +1,26 @@
+# 1. Open the file if exists, if not create a new file
+file_name = "test.txt"
+try:
+    # Open the file in append mode (a+) which creates the file if it doesn't exist
+    file = open(file_name, "a+")
+
+    # 2. Add string 'abcde' to the end of the file
+    file.write("abcde")
+
+    # Move the file pointer to the beginning of the file for reading
+    file.seek(0)
+
+    # 3. Read and display first 5 characters
+    first_five_chars = file.read(5)
+    print("First 5 characters:", first_five_chars)
+
+    # Move the file pointer to the beginning of the file for counting characters
+    file.seek(0)
+
+    # 4. Display total number of characters present in the file
+    total_chars = len(file.read())
+    print("Total number of characters in the file:", total_chars)
+
+finally:
+    # Close the file to release system resources
+    file.close()
